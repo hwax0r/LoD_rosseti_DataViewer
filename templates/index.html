@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>File Upload</title>
+  </head>
+  <body>
+    <h1>File Upload</h1>
+    <form method="POST" action="upload_file" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+
+     <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Тип нарушения</th>
+            <th>Latitude</th>
+            <th>longitude</th>
+            <th>Filename</th>
+            <th>Photo</th>
+          </tr>
+        </thead>
+              <tbody>
+                {% for file in files %}
+                  <tr>
+                    <td>поле пока не работает</td>
+                    <td>{{file[1][0]}}</td>
+                    <td>{{file[1][1]}}</td>
+                    <td>{{file[0]}}</td>
+                    <td> kek </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+      </table>
+
+  </body>
+</html>
